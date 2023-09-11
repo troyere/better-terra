@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { getScreenshotUrl } from '../lib/ScreenshotUrlHelper';
+import { getScreenshotUrl, getSomeScreenshotUrls } from '../lib/ScreenshotUrlHelper';
 
-const startUrl = getScreenshotUrl('../assets/images/screenshots/overworld/2023-09-10_15.12.59.webp');
+const startUrl = getScreenshotUrl('../assets/images/screenshots/start/2023-09-10_15.12.59.webp');
+
+const limit = 5;
+
+const overworldUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/overworld/*.webp'), limit);
+const netherUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/nether/*.webp'), limit);
+const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/end/*.webp'), limit);
 </script>
 
 <template>
@@ -17,6 +23,56 @@ const startUrl = getScreenshotUrl('../assets/images/screenshots/overworld/2023-0
           <span class="the-presentation__sub-title">Coming soon !</span>
         </header>
       </div>
+    </div>
+
+    <div class="the-presentation__dimension">
+      <h2 class="the-presentation__dimension-title">
+        Overworld
+      </h2>
+
+      <p class="the-presentation__dimension-desc">
+        On vous le présente plus, vous connaissez...
+        <br />
+        A ceci près qu'il est modifié par l'impressionant mod <a href="https://modrinth.com/mod/terralith">Terralith</a>,
+        et bien d'autres encore !
+      </p>
+    </div>
+
+    <div v-for="url in overworldUrls" :key="url.href" class="the-presentation__dimension-imgs">
+      <img :src="url.href" class="the-presentation__dimension-img" />
+    </div>
+
+    <div class="the-presentation__dimension">
+      <h2 class="the-presentation__dimension-title">
+        Nether
+      </h2>
+
+      <p class="the-presentation__dimension-desc">
+        La dimension infernale ! Quoique...
+        <br />
+        Transformé par l'incroyable mod <a href="https://modrinth.com/mod/betternether">BetterNether</a>,
+        il est désormais parsemé de mystérieux biomes.
+      </p>
+    </div>
+
+    <div v-for="url in netherUrls" :key="url.href" class="the-presentation__dimension-imgs">
+      <img :src="url.href" class="the-presentation__dimension-img" />
+    </div>
+
+    <div class="the-presentation__dimension">
+      <h2 class="the-presentation__dimension-title">
+        End
+      </h2>
+
+      <p class="the-presentation__dimension-desc">
+        La dernière dimension, vide de toute vie dit-on...
+        <br />
+        Pas tout à fait, grâce au sublime mod <a href="https://modrinth.com/mod/betterend">BetterEnd</a> !
+      </p>
+    </div>
+
+    <div v-for="url in endUrls" :key="url.href" class="the-presentation__dimension-imgs">
+      <img :src="url.href" class="the-presentation__dimension-img" />
     </div>
   </div>
 </template>
@@ -37,11 +93,10 @@ const startUrl = getScreenshotUrl('../assets/images/screenshots/overworld/2023-0
   }
 
   &__overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -64,6 +119,32 @@ const startUrl = getScreenshotUrl('../assets/images/screenshots/overworld/2023-0
     font-weight: bold;
     font-size: 24px;
     margin-top: 16px;
+  }
+
+  &__dimension {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    color: #463D4B;
+  }
+
+  &__dimension-title {
+    font-family: "minecraft-ten";
+    font-size: 32px;
+  }
+
+  &__dimension-desc {
+    text-align: center;
+  }
+
+  &__dimension-img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
   }
 }
 </style>
