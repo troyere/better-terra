@@ -1,4 +1,6 @@
-@import './base.css';
+@use "base";
+
+@import "font-faces.scss";
 
 #app {
   max-width: 1280px;
