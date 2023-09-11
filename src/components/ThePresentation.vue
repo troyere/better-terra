@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { getScreenshotUrl } from '../lib/ScreenshotUrlResolver';
+import { getScreenshotUrl } from '../lib/ScreenshotUrlHelper';
 
-const startBackground = getScreenshotUrl('overworld/2023-09-10_15.12.59.webp');
+const startUrl = getScreenshotUrl('../assets/images/screenshots/overworld/2023-09-10_15.12.59.webp');
 </script>
 
 <template>
   <div class="the-presentation">
     <div class="the-presentation__start">
-      <img :src="startBackground" class="the-presentation__start-background" />
+
+      <img :src="startUrl.href" class="the-presentation__start-background" />
 
       <div class="the-presentation__overlay">
         <header class="the-presentation__header">
