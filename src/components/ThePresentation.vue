@@ -14,7 +14,7 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
   <div class="the-presentation">
     <div class="the-presentation__start">
 
-      <img :src="startUrl.href" class="the-presentation__start-background" />
+      <img :src="startUrl" class="the-presentation__start-background" />
 
       <div class="the-presentation__overlay">
         <header class="the-presentation__header">
@@ -38,8 +38,8 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in overworldUrls" :key="url.href" class="the-presentation__dimension-imgs">
-      <img :src="url.href" class="the-presentation__dimension-img" />
+    <div v-for="url in overworldUrls" :key="url" class="the-presentation__dimension-imgs">
+      <img :src="url" class="the-presentation__dimension-img" />
     </div>
 
     <div class="the-presentation__dimension">
@@ -55,8 +55,8 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in netherUrls" :key="url.href" class="the-presentation__dimension-imgs">
-      <img :src="url.href" class="the-presentation__dimension-img" />
+    <div v-for="url in netherUrls" :key="url" class="the-presentation__dimension-imgs">
+      <img :src="url" class="the-presentation__dimension-img" />
     </div>
 
     <div class="the-presentation__dimension">
@@ -71,8 +71,8 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in endUrls" :key="url.href" class="the-presentation__dimension-imgs">
-      <img :src="url.href" class="the-presentation__dimension-img" />
+    <div v-for="url in endUrls" :key="url" class="the-presentation__dimension-imgs">
+      <img :src="url" class="the-presentation__dimension-img" />
     </div>
   </div>
 </template>
