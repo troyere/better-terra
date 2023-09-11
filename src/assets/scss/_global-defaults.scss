@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "pro-font-windows", sans-serif;
+  min-height: 100vh;
+  transition: color 0.5s, background-color 0.5s;
+  font-size: 16px;
+}
