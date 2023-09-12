@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import { getScreenshotUrl, getSomeScreenshotUrls } from '../lib/ScreenshotUrlHelper';
+import {
+  getOneStartScreenshot,
+  getSomeEndScreenshots,
+  getSomeNetherScreenshots,
+  getSomeOverworldScreenshots
+} from '../lib/ScreenshotsUtils';
 
-const startUrl = getScreenshotUrl('../assets/images/screenshots/start/2023-09-10_15.12.59.webp');
+const startScreenshot = getOneStartScreenshot();
 
-const limit = 5;
-
-const overworldUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/overworld/*.webp'), limit);
-const netherUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/nether/*.webp'), limit);
-const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screenshots/end/*.webp'), limit);
+const overworldScreenshots = getSomeOverworldScreenshots(5);
+const netherScreenshots = getSomeNetherScreenshots(5);
+const endScreenshots = getSomeEndScreenshots(5);
 </script>
 
 <template>
   <div class="the-presentation">
     <div class="the-presentation__start">
 
-      <img :src="startUrl" class="the-presentation__start-background" />
+      <img :src="startScreenshot" class="the-presentation__start-background" />
 
       <div class="the-presentation__overlay">
         <header class="the-presentation__header">
@@ -38,7 +41,7 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in overworldUrls" :key="url" class="the-presentation__dimension-imgs">
+    <div v-for="url in overworldScreenshots" :key="url" class="the-presentation__dimension-imgs">
       <img :src="url" class="the-presentation__dimension-img" />
     </div>
 
@@ -55,7 +58,7 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in netherUrls" :key="url" class="the-presentation__dimension-imgs">
+    <div v-for="url in netherScreenshots" :key="url" class="the-presentation__dimension-imgs">
       <img :src="url" class="the-presentation__dimension-img" />
     </div>
 
@@ -71,7 +74,7 @@ const endUrls = getSomeScreenshotUrls(import.meta.glob('../assets/images/screens
       </p>
     </div>
 
-    <div v-for="url in endUrls" :key="url" class="the-presentation__dimension-imgs">
+    <div v-for="url in endScreenshots" :key="url" class="the-presentation__dimension-imgs">
       <img :src="url" class="the-presentation__dimension-img" />
     </div>
   </div>
