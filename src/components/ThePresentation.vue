@@ -146,7 +146,7 @@ const endScreenshots = getSomeEndScreenshots(5);
   &__dimension-img {
     display: block;
     width: 100%;
-    height: 350px;
+    height: 30rem;
     object-fit: cover;
   }
 }
