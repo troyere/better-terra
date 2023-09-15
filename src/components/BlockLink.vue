@@ -16,7 +16,7 @@ const onMouseOut = () => isHovering.value = false;
       <img :src="blastFurnace" class="block-link__blast-furnace-off" />
 
       <Transition name="block-link__blast-furnace-lit-">
-        <img :src="blastFurnaceLit" class="block-link__blast-furnace-lit" v-if="isHovering" />
+        <img :src="blastFurnaceLit" class="block-link__blast-furnace-lit" v-show="isHovering" />
       </Transition>
     </div>
 
@@ -24,7 +24,7 @@ const onMouseOut = () => isHovering.value = false;
       <img :src="wallHangingSign" class="block-link__hanging-sign" />
 
       <Transition name="block-link__hanging-sign-glow-">
-        <img :src="wallHangingSign" class="block-link__hanging-sign-glow" v-if="isHovering" />
+        <img :src="wallHangingSign" class="block-link__hanging-sign-glow" v-show="isHovering" />
       </Transition>
 
       <span class="block-link__text">Doc</span>
