@@ -78,6 +78,7 @@ const onMouseOut = () => isHovering.value = false;
     top: 59px;
     width: 263px;
     height: 263px;
+    pointer-events: none;
   }
 
   &__hanging-sign {
