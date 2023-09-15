@@ -24,6 +24,10 @@ const endScreenshots = getSomeEndScreenshots(5);
           <h1 class="the-presentation__title">Better Terra</h1>
 
           <span class="the-presentation__sub-title">Coming soon !</span>
+
+          <span class="the-presentation__install-doc-link">
+            <RouterLink :to="{ name: 'install-doc' }">Installation</RouterLink>
+          </span>
         </header>
       </div>
     </div>
@@ -122,6 +126,10 @@ const endScreenshots = getSomeEndScreenshots(5);
     font-family: "pro-font-windows";
     font-weight: bold;
     font-size: 24px;
+    margin-top: 16px;
+  }
+
+  &__install-doc-link {
     margin-top: 16px;
   }
 
