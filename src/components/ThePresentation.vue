@@ -5,6 +5,7 @@ import {
   getSomeNetherScreenshots,
   getSomeOverworldScreenshots
 } from '../lib/ScreenshotsUtils';
+import BlockLink from './BlockLink.vue';
 
 const startScreenshot = getOneStartScreenshot();
 
@@ -25,9 +26,7 @@ const endScreenshots = getSomeEndScreenshots(5);
 
           <span class="the-presentation__sub-title">Coming soon !</span>
 
-          <span class="the-presentation__install-doc-link">
-            <RouterLink :to="{ name: 'install-doc' }">Installation</RouterLink>
-          </span>
+          <BlockLink />
         </header>
       </div>
     </div>
@@ -129,8 +128,45 @@ const endScreenshots = getSomeEndScreenshots(5);
     margin-top: 16px;
   }
 
-  &__install-doc-link {
+  &__install-link {
+    display: flex;
+    width: 300px;
+    height: 300px;
     margin-top: 16px;
+    position: relative;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+  &__install-link-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--mousehover {
+      display: none;
+      animation: fadeIn ease 2s;
+    }
+
+    &:hover {
+      &--mousehover {
+        display: block;
+      }
+    }
+  }
+
+  &__install-link {
+    // position: absolute;
+    // top: 50%;
+    // color: white;
+    // transform : skew(0deg, 20deg);
   }
 
   &__dimension {
