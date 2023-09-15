@@ -115,6 +115,7 @@ const endScreenshots = getSomeEndScreenshots(5);
   &__title {
     font-family: "minecraft-ten";
     font-size: 64px;
+    text-align: center;
   }
 
   &__sub-title {
