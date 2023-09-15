@@ -108,7 +108,7 @@ const endScreenshots = getSomeEndScreenshots(5);
   }
 
   &__header {
-    margin-top: 10%;
+    margin-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
