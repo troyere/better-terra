@@ -40,7 +40,7 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
           </p>
 
           <p>
-            Facultatif : installation d'un ressource pack. Les ressources packs changent les textures du jeu. Ce mod n'est pas obligatoire et peut être différent de ce que les autres joueurs ont choisis. Nous utilisons <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-32x" target="_blank">FaithFul 32x</a>, <a href="https://www.curseforge.com/minecraft/texture-packs/stay-true" target="_blank">Stay true</a>, etc. C'est selon les préférences. Le .zip téléchargé doit être placé tel quel dans "%USERPROFILE%\AppData\Roaming\.minecraft\resourcepacks".
+            Facultatif : installation d'un ressource pack. Les ressources packs changent les textures du jeu. Ce mod n'est pas obligatoire et peut être différent de ce que les autres joueurs ont choisis. Nous utilisons <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-32x" target="_blank">FaithFul 32x</a> ou bien <a href="https://www.curseforge.com/minecraft/texture-packs/stay-true" target="_blank">Stay true</a>, etc. C'est selon les préférences. Le .zip téléchargé doit être placé tel quel dans "%USERPROFILE%\AppData\Roaming\.minecraft\resourcepacks".
             <br />
             Pour activer le ressource pack dans le jeu, une fois lancé : Options > Packs de ressources > Cliquez sur votre pack a gauche (il se retrouvera à droite, parmi les ressource packs activés).
           </p>
