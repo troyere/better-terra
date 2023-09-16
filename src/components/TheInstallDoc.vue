@@ -33,7 +33,7 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
 
           <p>Le serveur est une version modidifée de Minecraft 1.20.1, grâce à <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric</a>, qui va permettre d'installer les mods. Il faut que les mods soient donc à la fois compatible avec Minecraft 1.20.1 et Fabric.</p>
 
-          <p>Téléchargez <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric</a> et executez le .jar.</p>
+          <p><a href="https://fabricmc.net/" target="_blank">Suivre la documentation d'installation de Fabric.</a></p>
 
           <p>Une fois que Minecraft et Fabric sont installés, les mods peuvent être ajouté. Se référer au lien vers le .zip ci-dessus, contenant tous les mods nécessaires. Extraire les mods (ce sont eux aussi des .jar) dans le dossier "%USERPROFILE%\AppData\Roaming\.minecraft\mods". S'il n'existe pas, il faut le créer.</p>
         
