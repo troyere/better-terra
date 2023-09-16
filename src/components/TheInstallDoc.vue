@@ -7,11 +7,13 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
     <div class="the-install-doc__start">
       <img :src="startScreenshot" class="the-install-doc__start-background" />
 
-      <header class="the-install-doc__header">
-        <h1 class="the-install-doc__title">Better Terra</h1>
+      <div class="the-install-doc__overlay">
+        <header class="the-install-doc__header">
+          <h1 class="the-install-doc__title">Better Terra</h1>
 
-        <span class="the-install-doc__sub-title">Documentation</span>
-      </header>
+          <span class="the-install-doc__sub-title">Documentation</span>
+        </header>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +31,15 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
     width: auto;
     height: auto;
     object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &__header {
