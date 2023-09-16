@@ -13,16 +13,18 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
 
           <span class="the-install-doc__sub-title">Documentation</span>
         </header>
-      </div>
 
-      <div class="the-install-doc__server-info">
-        <p>
-          <a href="http://89.87.26.86:25555/betterterra/resources/datapacks">Mods</a>
-        </p>
+        <div class="the-install-doc__server-info">
+          <h2 class="the-install-doc__doc-title">Mods & Datapacks sur le serveur</h2>
 
-        <p>
-          <a href="http://89.87.26.86:25555/betterterra/resources/datapacks">Datapacks</a>
-        </p>
+          <p>
+            <a href="http://89.87.26.86:25555/betterterra/resources/datapacks">Mods</a>
+          </p>
+
+          <p>
+            <a href="http://89.87.26.86:25555/betterterra/resources/datapacks">Datapacks</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -49,6 +51,7 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
     left: 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
