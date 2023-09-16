@@ -18,7 +18,11 @@ import startScreenshot from '../assets/images/screenshots/2023-09-15_15.35.02.pn
           <h2 class="the-install-doc__doc-title">Mods sur le serveur</h2>
 
           <p>
-            <a href="http://89.87.26.86:25555/betterterra/resources/mods" target="_blank">Mods</a>
+            <a href="http://89.87.26.86:25555/betterterra/resources/mods" target="_blank">Voir la liste des mods</a>
+          </p>
+
+          <p>
+            <a href="http://89.87.26.86:25555/betterterra/resources/mods/zip" target="_blank">Téléchargez l'archive ZIP des mods</a>
           </p>
         </div>
 
